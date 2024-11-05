@@ -95,19 +95,25 @@
 
 
     .main-todo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        background-color: black;
-        padding: 5px 8px;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        color: yellow;
-        white-space: nowrap;
-        overflow-x: auto;
-        max-width: 100%;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    padding: 5px 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: yellow;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow-x: auto; /* Prevent overflow */
+}
+
+.main-todo li {
+    flex-grow: 1; /* Allow the list item to take available space */
+ /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
 
     .dltBtn,
     .editBtn {
@@ -165,7 +171,7 @@
             font-size: 20px;
         }
         .taskinput {
-            gap: 5px;
+            gap: 8px;
         }
         .taskinput input {
             width: 90%;
@@ -182,15 +188,31 @@
             border-radius: 10px;
 
         }
-
-        .main-todo {
-         gap: 50px;
+        .todoContainer{
+            padding: 5px 10px;
         }
 
-        .main-todo li {
-            width: 100%;
-            font-size: 16px;
-        }
+       
+    .main-todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: black;
+    padding: 5px 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: yellow;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow-x: auto; /* Prevent overflow */
+}
+
+.main-todo li {
+    flex-grow: 1; /* Allow the list item to take available space */
+ /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
 
         .dltBtn,
         .editBtn {
@@ -198,7 +220,7 @@
             padding: 4px 6px;
         }
     } 
-    @media (max-width: 480px) {
+    @media (max-width: 300px) {
         .taskinput input {
             width: 93%;
             padding: 11px 6px;
